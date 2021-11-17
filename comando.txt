@@ -4,3 +4,6 @@ dotnet tool install --global dotnet-ef --version 5.0.4
 dotnet ef migrations add Initial -o Data/Migrations
 dotnet ef database update
 ng new ProEventos-App
+npm install --save @fortawesome/fontawesome-free
+npm install ngx-bootstrap --save
+npm install bootstrap@4
