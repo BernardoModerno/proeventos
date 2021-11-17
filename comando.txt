@@ -3,3 +3,4 @@ dotnet tool uninstall --global dotnet-ef
 dotnet tool install --global dotnet-ef --version 5.0.4
 dotnet ef migrations add Initial -o Data/Migrations
 dotnet ef database update
+ng new ProEventos-App
