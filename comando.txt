@@ -7,3 +7,18 @@ ng new ProEventos-App
 npm install --save @fortawesome/fontawesome-free
 npm install ngx-bootstrap --save
 npm install bootstrap@4
+Em ProEventos/back/src:
+    {   dotnet new sln -n ProEventos
+        dotnet new classlib -n ProEventos.Persistence
+        dotnet new classlib -n ProEventos.Domain
+        dotnet new classlib -n ProEventos.Application
+        dotnet sln ProEventos.sln add ProEventos.Application
+        dotnet sln ProEventos.sln add ProEventos.Domain
+        dotnet sln ProEventos.sln add ProEventos.API
+        dotnet sln ProEventos.sln add ProEventos.Persistence
+        dotnet add ProEventos.API/ProEventos.API.csproj reference ProEventos.Application
+
+        dotnet ef migrations add Initial -p ProEventos.Persistence -s ProEventos.API
+        dotnet ef database update -s ProEventos.API
+    }
+Em ProEventos.API baixar NewtonSoftJson
