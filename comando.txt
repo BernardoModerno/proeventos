@@ -22,3 +22,6 @@ Em ProEventos/back/src:
         dotnet ef database update -s ProEventos.API
     }
 Em ProEventos.API baixar NewtonSoftJson
+npm install -g @angular/cli@11.2.1
+npm install ngx-toastr --save
+npm install ngx-spinner --save
